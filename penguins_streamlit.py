@@ -48,11 +48,3 @@ st.write('We used a machine learning (Random Forest) model to '
          'predict the species, the features used in this prediction '
          ' are ranked by relative importance below.')
 st.image('feature_importance.png')
-
-
-from pyngrok import ngrok
-! ngrok authtoken 1vXlcIP1hk2NmY9UBuuSHU5gLHX_72emhyJmaGcTmoF6TQfKk
-!nohup streamlit run penguins_streamlit.py
-public_url = ngrok.connect(port = 8501)
-public_url
-!streamlit run -- server.port 80 penguins_streamlit.py >\dev/null
